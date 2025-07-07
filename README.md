@@ -13,10 +13,10 @@ Notes:
     2. For a given "mesh_file.geo" mesh file, use "gmsh -3 mesh_file.geo" to create the mesh_file.msh file. Bring the mesh_file.msh file into the desired run directory.
     3. Run "gmshToFoam mesh_file.msh". This will change and create certain files within the directory to incorporate the information of the mesh. See OpenFOAM documentation for more details.
     4. Then, in constant/polymesh/boundary, for walls with symmetry boundary conditions, change:  
-    type            patch;  
+        type            patch;  
 to  
-    type            symmetry;  
+        type            symmetry;  
 and also comment out:  
-    physicalType    patch;  
+        physicalType    patch;  
   
 3. To change the bubble size or initial condition, modify system/setFieldsDict and then run the "setFields" command. See OpenFOAM documentation for more details.
